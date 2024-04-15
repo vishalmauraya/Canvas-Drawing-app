@@ -1,6 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'dart:math';
 
 class User extends StatefulWidget {
   const User({super.key});
@@ -10,6 +12,7 @@ class User extends StatefulWidget {
 }
 
 class _UserState extends State<User> {
+  dynamic ImgId=Random().nextInt(9)+1;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -23,8 +26,9 @@ class _UserState extends State<User> {
           Container(height: MediaQuery.of(context).size.height/3,
           width: MediaQuery.of(context).size.width/1.5,
           decoration: const BoxDecoration(
-            color: Colors.red
-          ),child:const Text("Cid"),),
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(50)),
+          ),child:Image.asset("Images/cid$ImgId.png")),
 
           Container(height: MediaQuery.of(context).size.height/3,
             width: MediaQuery.of(context).size.width/1.5,
