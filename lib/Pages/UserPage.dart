@@ -12,7 +12,9 @@ class User extends StatefulWidget {
 }
 
 class _UserState extends State<User> {
-  dynamic ImgId=Random().nextInt(9)+1;
+  dynamic ImgId;
+
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -28,7 +30,10 @@ class _UserState extends State<User> {
           decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(50)),
-          ),child:Image.asset("Images/cid$ImgId.png")),
+          ),child:GestureDetector(child: Image.asset("Images/cid$ImgId.png"),
+              onTap: (){
+                ImgId=Random().nextInt(9)+1;
+              },)),
 
           Container(height: MediaQuery.of(context).size.height/3,
             width: MediaQuery.of(context).size.width/1.5,
