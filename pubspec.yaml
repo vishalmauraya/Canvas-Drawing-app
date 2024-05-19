@@ -40,6 +40,8 @@ dependencies:
   flutter_slider_drawer: ^2.1.3
   dropdown_button2: ^2.3.9
   flutter_drawing_board: ^0.7.0+2
+  path_provider: ^2.1.3
+  flutter_colorpicker: ^1.0.3
 
 dev_dependencies:
   flutter_test:

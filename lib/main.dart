@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor:const Color(0xff3f5caa),
         title: Text(
           "DRAW CANVAS",
-          style: GoogleFonts.lato(textStyle:TextStyle(letterSpacing:3,fontSize: 24,fontWeight:FontWeight.w700,foreground: Paint()
+          style: GoogleFonts.macondo(textStyle:TextStyle(letterSpacing:3,fontSize: 24,fontWeight:FontWeight.w700,foreground: Paint()
           ..style=PaintingStyle.stroke
           ..strokeWidth=1.5
           ..color=const Color(0xffe7e5e5))),
@@ -64,11 +64,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Stack(
         children: [
+          User(),
           // Main content
           SizedBox(
             width: MediaQuery.of(context).size.width, // Adjust width as needed
-            height: MediaQuery.of(context).size.height, // Adjust height as needed
-            child: const User(),
+            height: MediaQuery.of(context).size.height, // Adjust height as needed,
           ),
           // Drawer
           AnimatedPositioned(
@@ -100,6 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
+
         ],
       ),
 
